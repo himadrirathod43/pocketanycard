@@ -1,0 +1,78 @@
+.headercols-temp {
+  .logo {
+    padding: 15px 20px;
+    display: flex;
+  }
+}
+.col-saparate {
+  &.bg-color {
+    // background: #db7028;
+    background: var(--theme05);
+    padding: 20px 0;
+  }
+  .service-list {
+    .item {
+      text-align: left;
+      margin-bottom: 11px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .ser-link {
+        flex-direction: row;
+        padding: 0 16px 0 6px;
+        color: #fff;
+        .icon {
+          min-width: 29px;
+          text-align: center;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  .name-wrap {
+    text-transform: uppercase;
+    .user-name {
+      font-size: 18px;
+      line-height: 20px;
+      color: #000000;
+      background: #fff;
+      padding: 10px 7px 10px 20px;
+      margin-bottom: 3px;
+      font-weight: 500;
+      display: inline-block;
+      width: 100%;
+    }
+    .user-post {
+      font-size: 11px;
+      color: #2d2d2c;
+      line-height: 15px;
+      padding: 5px 20px 5px 20px;
+      background: rgba(255, 255, 255, 0.8);
+      display: block;
+    }
+  }
+}
+
+.contact-detail3 {
+  .contact-link3 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .icon {
+    padding-right: 0;
+  }
+}
+
+.user-img {
+  min-height: 130px;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <g id="Group_2217" data-name="Group 2217" transform="translate(-28 -28)">
+    <g id="Group_2219" data-name="Group 2219">
+      <rect id="Rectangle_7" data-name="Rectangle 7" width="100" height="100" rx="12" transform="translate(28 28)" fill="#e4dfff"/>
+      <path id="Icon_ionic-md-paper-plane" data-name="Icon ionic-md-paper-plane" d="M3.375,35.009l16.874,6.33,2.1,21.075,10.545-14.76,14.76,14.76L62.414,3.375ZM45.227,52.891,33.462,41.041,49.769,18.135,24.039,37.691l-9.75-3.52L55.587,12Z" transform="translate(45.106 45.106)" fill="#927dfc"/>
+      <path id="Icon_ionic-md-paper-plane-2" data-name="Icon ionic-md-paper-plane" d="M45.227,52.891,33.462,41.041,49.769,18.135,24.039,37.691l-9.75-3.52L55.587,12Z" transform="translate(45.106 45.106)" fill="#927dfc" opacity="0.6"/>
+    </g>
+  </g>
+</svg>
