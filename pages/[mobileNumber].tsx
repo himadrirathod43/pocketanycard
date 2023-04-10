@@ -64,7 +64,7 @@ const UserByMobileNumber : React.FC<Props> = ({ user }) => {
           // content={`https://admin.pocketsite.me/assets/b4055716-8730-4ee7-a97a-7f10808ed9b8.png`} 
           />
       </Head>
-      <Suspense fallback={<div style={{ color: "transparent linear-gradient(270deg,#7159d6,#06b9bb) 0 0 no-repeat padding-box" , textAlign : "center" }}><Loading /></div>}>{views}</Suspense>
+      <Suspense fallback={<div className="text-center" style={{ color: "transparent linear-gradient(270deg,#7159d6,#06b9bb) 0 0 no-repeat padding-box" , textAlign : "center" }}><Loading /></div>}>{views}</Suspense>
     </>
   );
 };
