@@ -1,0 +1,42 @@
+.bg-color {
+  // background: #1d3c78;
+  background: var(--theme05);
+}
+
+.temp-centerized {
+  .service-list {
+    margin-top: -36px;
+    position: relative;
+    z-index: 15;
+  }
+  .bg-curve {
+    &::before {
+      content: "";
+      left: -18px;
+      top: -20px;
+      width: 61%;
+      height: 76px;
+      // background-image: url('../../public/assets/images/shape.svg');
+      background-image: url("../../../public/assets/images/shape.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      z-index: 1;
+      background-position: 100% 100%;
+      background-size: cover;
+    }
+    img {
+      position: relative;
+      z-index: 15;
+    }
+  }
+}
+
+.user-img {
+  &.rounded {
+    width: 130px;
+    height: 130px;
+  }
+}
+.margin-top-reverse {
+  margin-top: -38px;
+}

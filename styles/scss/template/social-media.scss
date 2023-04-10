@@ -1,0 +1,42 @@
+.center-feild {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.media-filed {
+  .switch {
+    display: inline-block;
+    position: absolute;
+    right: 50px;
+    top: 15px;
+    z-index: 12;
+  }
+}
+
+.media-filed {
+  display: flex;
+  align-items: center;
+  position: relative;
+  // margin-bottom: 15px;
+
+  .social-icon {
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    z-index: 5;
+  }
+
+  .form-control {
+    padding-left: 52px;
+    padding-right: 60px;
+  }
+
+  .floating-group {
+    margin-bottom: 0;
+
+    .float-label {
+      left: 48px;
+    }
+  }
+}

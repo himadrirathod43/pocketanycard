@@ -1,0 +1,57 @@
+// // $theme05: #046030;
+// $theme05: var(--theme05);
+
+// .mask {
+//   height: 208px;
+//   position: relative;
+//   background-color: var(--theme05);
+// }
+// .curve-line {
+//   margin-top: -90px;
+//   overflow: hidden;
+//   position: relative;
+//   // &::before {
+//   //   content: "";
+//   //   height: calc(100% - 43px);
+//   //   position: absolute;
+//   //   border-right: 2px solid #fff;
+//   //   right: 0;
+//   //   bottom: 0;
+//   //   z-index: 12;
+//   // }
+// }
+
+// .temp-lower {
+//   position: relative;
+//   z-index: 150;
+//   background-color: var(--secondary05);
+// }
+
+// $theme05: #046030;
+$theme05: var(--theme05);
+
+.mask {
+  height: 230px;
+  position: relative;
+  // background-color: var(--theme05);
+}
+.curve-line {
+  margin-top: -90px;
+  overflow: hidden;
+  position: relative;
+  // &::before {
+  //   content: "";
+  //   height: calc(100% - 43px);
+  //   position: absolute;
+  //   border-right: 2px solid #fff;
+  //   right: 0;
+  //   bottom: 0;
+  //   z-index: 12;
+  // }
+}
+ 
+.temp-lower {
+  position: relative;
+  z-index: 150;  
+  background-color: var(--secondary05);
+}

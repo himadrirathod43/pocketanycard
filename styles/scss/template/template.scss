@@ -1,0 +1,35 @@
+.temp-slide-wrap {
+  margin-bottom: 80px;
+  .swiper-wrapper {
+    padding-bottom: 80px;
+  }
+  .slide-item {
+  display: -ms-flexbox;
+    display: flex;
+    box-shadow: 5px 5px 10px #00000029;
+    border-radius: 12px;
+    margin-right: 15px;
+    overflow: hidden;
+    -ms-flex-direction: column;
+      flex-direction: column;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    bottom: 0;
+    top: unset;
+    &::after {
+      font-size: 20px;
+      color: #a9a9ae;
+      font-weight: 900;
+    }
+  }
+  .swiper-button-next {
+    left: unset;
+    right: 0;
+  }
+  .swiper-button-prev {
+    left: 0;
+    right: unset;
+  }
+}

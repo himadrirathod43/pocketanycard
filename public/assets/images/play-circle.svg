@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <filter id="Icon_ionic-ios-play-circle" x="0" y="0" width="96" height="96" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_ionic-ios-play-circle)">
+    <path id="Icon_ionic-ios-play-circle-2" data-name="Icon ionic-ios-play-circle" d="M27.375,3.375a24,24,0,1,0,24,24A24,24,0,0,0,27.375,3.375Zm9.669,24.45L21.213,37.4a.513.513,0,0,1-.773-.45V17.8a.511.511,0,0,1,.773-.45l15.831,9.577A.529.529,0,0,1,37.044,27.825Z" transform="translate(20.63 16.63)" fill="#fff"/>
+  </g>
+</svg>

@@ -1,0 +1,191 @@
+.authentication-page {
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    background-image: url(../../../public/assets/images/triangles.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+.form-control.is-valid{
+  padding-right: 0;
+}
+
+
+.auth-inner {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
+  max-width: 980px;
+  margin: 0 auto;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  z-index: 50;
+}
+
+.auth-form {
+  padding: 30px;
+  text-align: center;
+  .center-title {
+    font-size: 24px;
+    line-height: 30px;
+    // .or-text{
+    //     font-size: 14px;
+    //     line-height: 16px;
+    //     color: #666;
+    // }
+  }
+  .field-wrap {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+    .floating-group .form-control { 
+      padding: 11px 20px; 
+    }
+}
+.side-left {
+  box-shadow: 0 8px 8px 0 rgba(50, 50, 50, 0.4);
+
+  .top-col {
+    padding: 30px;
+    .title {
+    font-size: 24px;
+      line-height: 48px;
+      position: relative;
+      display: inline-block;
+      font-weight: 600;
+      &::before {
+        content: "";
+        background: transparent
+          linear-gradient(
+            270deg,
+            rgba(113, 89, 214, 1) 0%,
+            rgba(6, 185, 187, 1) 100%
+          )
+          0% 0% no-repeat padding-box;
+        width: 68px;
+        height: 4px;
+        display: inline-block;
+        position: absolute;
+        left: 28px;
+        top: 40px;
+        z-index: 21;
+      }
+    }
+  }
+}
+
+// OTP css start here
+.otp-field-wrap {
+  text-align: center;
+  .form-control {
+    margin-right: 15px;
+    border-radius: 6px;
+    width: 48px;
+    height: 48px;
+    padding: 4px 10px;
+    font-size: 22px;
+    line-height: 22px;
+    color: #000;
+    text-align: center;
+    &:focus {
+        background-color: #c1e3e763;
+    }
+    &:last-child {
+      margin-right: 0;
+
+    }
+  } 
+
+}
+.otp-text {
+  font-size: 14px;
+  a {
+    color: #0e9ec9;
+  }
+}
+
+.otp-field-wrap{
+.form-control.is-valid {
+    border-color: #198754;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 46%; 
+    padding-right: calc(1.5em + 0.3rem);
+    box-shadow: none; 
+    background-color: #c1e3e763;
+    &:focus{ 
+          box-shadow: none;
+    }
+  }
+}
+
+
+// .form-control.is-valid:focus,
+// .was-validated .form-control:valid:focus {
+//   padding: 0;
+//   box-shadow: none;
+// }
+
+.auth-inner{
+  .side-left  {
+      padding-bottom: 35px;
+    }
+}
+// All media start here
+
+@media only screen and (max-width: 991px) {
+  .authentication-page {
+    height: 100%;
+  }
+ .auth-form {
+   padding: 40px 16px 0;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+  .authentication-page {
+    padding: 0;
+    &::before{
+      display: none;
+      background-image: none;
+    }
+  }
+  .auth-inner {
+    max-width: 100%;
+    box-shadow: none;
+  }
+
+  .auth-form {
+      padding: 40px 0 20px;
+    .field-wrap {
+      max-width: 100%;
+    }
+  }
+
+     
+        .side-left {
+          box-shadow: none;
+          border: 1px solid #eaeaea;
+          margin-bottom: 20px;
+          border-radius: 8px;
+          padding-bottom: 15px;
+        }
+     
+}

@@ -1,0 +1,380 @@
+.business-card-section {
+  p {
+    margin-bottom: 86px;
+  }
+}
+
+.ornament-bg {
+  position: relative;
+  overflow: hidden;
+  z-index: 15;
+
+  &::after {
+    content: "";
+    background-image: url("../../public/assets/images/Ornament.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -38%;
+    top: -2%;
+    z-index: -1;
+  }
+}
+
+.business-card-section {
+  padding: 40px 0;
+  p{
+    color: #000;
+  }
+  .content-cols {
+    padding-top: 110px;
+  }
+}
+
+.easy-step-section {
+    padding: 60px 0 50px;
+
+  .heading-medium {
+    margin-bottom: 80px;
+  }
+}
+
+.step-block {
+  padding-right: 40px;
+
+  .step-icon {
+    margin-bottom: 32px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    display: inline-block;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 30px;
+  }
+
+  &:hover {
+    .step-icon {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      display: inline-block;
+      border-radius: 10px;
+      transform: scale(1.2);
+    }
+  }
+}
+
+// video section css start
+.video-section{
+  padding-top: 50px;
+    // background: #faf9ff;
+   background: #eae6ff;
+}
+.video-wrap {
+  background: #dbdbdb 0% 0% no-repeat padding-box;
+  border-radius: 24px;
+  position: relative;
+  width: 100%;
+  height: 560px;
+  margin-bottom: 117px;
+  overflow: hidden;
+  padding: 0 0;
+
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 12;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+}
+
+// content image section css
+// .content-image-section{
+//     padding: 96px 0 118px;
+// }
+.-mt-44 {
+  margin-top: -44px;
+}
+
+// special -section css
+.special-desing-section {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.img-box {
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 100%;
+  }
+}
+
+// businesscard-section section css
+
+ 
+.businesscard-section {
+  background: #fff;
+  padding: 30px 0 70px; 
+
+}
+
+.mobile-finet-section {
+  padding: 50px 0 15px;
+}
+
+.stay-connected-section {
+      background: #d7ebff;
+  opacity: 1;
+  padding: 90px 0;
+
+  .form-control {
+    min-width: 548px;
+    max-width: 548px;
+  }
+
+  .floating-group {  
+    .form-control {
+      padding: 11px 18px;
+    }
+  }
+}
+
+.gradient-background { 
+  background: linear-gradient(62deg,   #d3feff, #e4deff); 
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+
+}
+
+    
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+#steps.active,#video.active,#business-cards.active,#contacts.active { 
+  &::before{
+  content: "";
+  display: block;
+  height: 78px;
+  /* fixed header height*/
+  // margin: -78px 0 0;
+  /* negative fixed header height */
+  }
+  
+}
+
+
+.business-card-section{
+.img { 
+    animation-name: roll;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 2s;
+  }
+}
+@keyframes roll { 
+  0% {
+    transform: translateY(30px);
+  } 
+  20% {
+    transform: translateY(-50px);
+  } 
+}
+@-webkit-keyframes roll {
+  0% {
+    transform: translateY(30px) ;
+  }
+
+  20% {
+    transform: translateY(-50px);
+  }
+}
+
+// All media query css start here
+
+@media only screen and (max-width: 991px) {
+  .-mt-44 {
+    margin-top: 0;
+  }
+
+  .heading-main {
+    font-size: 54px;
+    font-weight: 500;
+    line-height: 66px;
+  }
+
+  .business-card-section {
+    .content-cols {
+      padding-top: 0;
+
+      br {
+        display: none;
+      }
+    }
+
+    p {
+      margin-bottom: 40px;
+    }
+  }
+
+  //    imgage -content section css
+  .content-image-section {
+    &.bg-sky-blue {
+      overflow: hidden;
+      padding: 0 0 0;
+    }
+  }
+
+  // stay connected section
+  .stay-connected-section {
+    padding: 40px 0;
+
+    .form-control {
+      min-width: auto;
+      width: 100%;
+    }
+
+    .form-group-class {
+      width: 100%;
+    }
+
+    .floating-group {
+      width: 100%;
+    }
+  }
+
+
+  .ornament-bg {
+    &::after {
+      right: 0;
+      top: -22%;
+    }
+  }
+
+    .video-wrap { 
+      margin-bottom: 55px; 
+    }
+        .easy-step-section {
+          padding: 20px 0 44px;
+        }
+}
+
+@media only screen and (max-width: 767px) {
+  .font-600 {
+    font-weight: 600;
+  }
+
+  .heading-main {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .business-card-section p {
+    margin-bottom: 30px;
+  }
+
+  .step-block {
+    padding-right: 0;
+    text-align: center;
+
+    .step-icon {
+      margin-bottom: 20px;
+    }
+  }
+
+  .easy-step-section {
+    padding: 20px 0 30px;
+
+    .heading-medium {
+      margin-bottom: 40px;
+    }
+  }
+
+  // video section
+  .video-wrap {
+    height: 360px; 
+  }
+
+  // special design css
+  .special-desing-section {
+    padding: 40px 0;
+  }
+
+  .mobile-finet-section {
+    padding: 40px 0 0;
+  }
+
+  .businesscard-section {
+    background: #fff;
+    padding: 30px 0 30px;
+  }
+    .video-section {
+      padding-top:20px; 
+      background: #fff;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+  .stay-connected-form {
+    flex-direction: column;
+    width: 100%;
+
+    .form-group-class {
+      margin-bottom: 16px;
+    }
+
+    .btn.btn-primary {
+      margin: 0 auto;
+          width: 100%;
+    }
+  }
+    .ornament-bg::after {
+      right: 0;
+      top: -19%;
+    }
+}
