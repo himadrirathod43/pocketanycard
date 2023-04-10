@@ -40,6 +40,7 @@ const UserByMobileNumber : React.FC<Props> = ({ user }) => {
 
   return (
     <>
+    {console.log('user.data[0]=======', user?.data[0])}
     {console.log('user.data[0]', user?.data[0])}
     {console.log('`https://admin.pocketsite.me/assets/${user?.data[0]?.profile_image?.filename_disk}`', `https://admin.pocketsite.me/assets/${user?.data[0]?.profile_image?.filename_disk}`)}
       <Head>
