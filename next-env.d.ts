@@ -3,3 +3,8 @@
 
 // NOTE: This file should not be edited
 // see https://nextjs.org/docs/basic-features/typescript for more information.
+
+declare module 'react-toastify';
+declare module 'react-inlinesvg';
+declare module 'react-bootstrap';
+declare module 'react-bootstrap/Modal';
