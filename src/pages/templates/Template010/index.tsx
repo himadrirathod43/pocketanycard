@@ -4,7 +4,7 @@ import user01 from "../images/user01.png";
 import { parseUrl, socialSharing } from "../../helper/helper";
 import { useEffect, useState } from "react";
 import { Avatar } from "@material-ui/core";
-import { ReviewModal } from "@/pages/component/ReviewModal";
+import { ReviewModal } from "../../component/ReviewModal";
 
 type Props = {
   editMode: boolean;
