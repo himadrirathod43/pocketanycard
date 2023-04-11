@@ -16,7 +16,7 @@ const importView = (tempId: number) =>
     ).catch(() => import(`./NotFound`))
   );
 
-const UserByMobileNumber : React.FC<Props> = ({ user }) => {
+export const UserByMobileNumber : React.FC<Props> = ({ user }) => {
   const [views, setViews] = useState<any>();
 
   async function loadViews(tempId: number) {
@@ -69,8 +69,6 @@ const UserByMobileNumber : React.FC<Props> = ({ user }) => {
     </>
   );
 };
-
-export default UserByMobileNumber;
 
 export const getServerSideProps = async ({ params } : any) => {
     const { mobileNumber } = params;
