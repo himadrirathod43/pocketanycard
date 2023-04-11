@@ -20,7 +20,7 @@ export interface AvatarProps {
   sx?: {};
 }
 
-const Template06 = ({ data } : Props) => {
+export const Template06 = ({ data } : Props) => {
   // const Template06 = ({ editMode = false }) => {
  
   const [reviewModal, setReviewModal] = useState<boolean>(false);
@@ -851,5 +851,3 @@ const Template06 = ({ data } : Props) => {
     </>
   );
 };
-
-export default Template06;

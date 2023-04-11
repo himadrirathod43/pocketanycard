@@ -12,7 +12,7 @@ type Props = {
   data: any;
 };
 
-const Template09 = ({ data } : Props) => {
+export const Template09 = ({ data } : Props) => {
   
   const [reviewModal, setReviewModal] = useState<boolean>(false);
   const [showFallback, setShowFallback] = useState<boolean>(false);
@@ -841,4 +841,3 @@ const Template09 = ({ data } : Props) => {
   );
 
 };
-export default Template09;
