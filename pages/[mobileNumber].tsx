@@ -2,7 +2,7 @@
 import React, { useEffect, lazy, useState, Suspense } from "react";
 import { nanoid } from "nanoid";
 import Head from "next/head";
-import { Loading } from "./component/Loading";
+import {Loading} from "./component/Loading";
 
 type Props = {
   user : any;
@@ -16,7 +16,7 @@ const importView = (tempId: number) =>
     ).catch(() => import(`./NotFound`))
   );
 
-export const UserByMobileNumber : React.FC<Props> = ({ user }) => {
+const UserByMobileNumber : React.FC<Props> = ({ user }) => {
   const [views, setViews] = useState<any>();
 
   async function loadViews(tempId: number) {
@@ -69,6 +69,8 @@ export const UserByMobileNumber : React.FC<Props> = ({ user }) => {
     </>
   );
 };
+
+export default UserByMobileNumber;
 
 export const getServerSideProps = async ({ params } : any) => {
     const { mobileNumber } = params;
