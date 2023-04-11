@@ -161,10 +161,8 @@
 
 import React from 'react'
 
-const Template011 = () => {
+export const Template011 = () => {
   return (
     <div>Template011</div>
   )
 }
-
-export default Template011

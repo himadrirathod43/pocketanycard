@@ -1,6 +1,6 @@
 import React from "react";
 
-const Loading = () => {
+export const Loading = () => {
   return (
     <>
       <div className="loader" style={{ textAlign : "center" }}>
@@ -9,5 +9,3 @@ const Loading = () => {
     </>
   );
 };
-
-export default Loading;

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 
-const NotFound = () => {
+export const NotFound = () => {
   return (
     <>
       <div className="container">
@@ -40,4 +40,3 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
