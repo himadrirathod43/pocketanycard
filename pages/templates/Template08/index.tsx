@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { ReviewModal } from "../../component/ReviewModal";
 import { Avatar } from "@material-ui/core";
 
-const Template08 = ({ data } : any) => {
+export const Template08 = ({ data } : any) => {
  
   const [reviewModal, setReviewModal] = useState<boolean>(false);
   const [showFallback, setShowFallback] = useState<boolean>(false);
@@ -846,4 +846,3 @@ const Template08 = ({ data } : any) => {
     </>
   );
 };
-export default Template08;
