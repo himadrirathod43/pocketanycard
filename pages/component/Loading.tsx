@@ -1,10 +1,11 @@
+import Image from "next/image";
 import React from "react";
 
-export const Loading = () => {
+export default function Loading() {
   return (
     <>
       <div className="loader" style={{ textAlign : "center" }}>
-        <img src={`/assets/images/misc/loader.gif`} alt="" width={300} height={300}></img>
+        <Image src={`/assets/images/misc/loader.gif`} alt="" width={300} height={300} />
       </div>
     </>
   );
