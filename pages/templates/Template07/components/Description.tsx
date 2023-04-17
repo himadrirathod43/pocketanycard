@@ -4,6 +4,6 @@ type Props = {
   descText: string;
   className: string;
 };
-export const Description: React.FC<Props> = ({ descText, className }) => {
+export default function Description({ descText, className }: Props){
   return <p className={className}>{descText}</p>;
 };

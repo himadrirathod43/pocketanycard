@@ -1,10 +1,12 @@
 // import "../../templates/scss/temp02.scss";
 import SVG from "react-inlinesvg";
 import user01 from "../images/user01.png";
-import { parseUrl, socialSharing } from "../../helper/helper";
+import socialSharing, { parseUrl } from "../../../helper/helper";
 import { useEffect, useState } from "react";
 import { Avatar } from "@material-ui/core";
-import { ReviewModal } from "../../component/ReviewModal";
+// import { ReviewModal } from "../../component/ReviewModal";
+import Image from "next/image";
+import ReviewModal from "@/pages/component/ReviewModal";
 
 type Props = {
   editMode: boolean;
@@ -12,7 +14,7 @@ type Props = {
   data: any;
 };
 
-export const Template010 = ({ data } : Props) => {
+export default function Template010 ({ data } : Props) {
   const [reviewModal, setReviewModal] = useState<boolean>(false);
   const [showFallback, setShowFallback] = useState<boolean>(false);
 
@@ -56,7 +58,7 @@ export const Template010 = ({ data } : Props) => {
             data[0]?.companyLogo ? (
                 <span className={`logo d-flex ${data[0]?.logoShape === 'circle' ? "" : "ps-3 pe-3 pb-4 pt-4"}`}>
                  {data[0]?.logoShape === "circle" ? (
-                    <img
+                    <Image
                       src={`https://admin.pocketsite.me/assets/${data[0]?.company_logo?.filename_disk}`}
                       alt="logo"
                     />

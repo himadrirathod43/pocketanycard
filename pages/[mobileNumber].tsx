@@ -2,7 +2,7 @@
 import React, { useEffect, lazy, useState, Suspense } from "react";
 import { nanoid } from "nanoid";
 import Head from "next/head";
-import {Loading} from "./component/Loading";
+import Loading from "./component/Loading";
 
 type Props = {
   user : any;

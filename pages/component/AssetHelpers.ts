@@ -1,1 +1,1 @@
-export const toAbsoluteUrl = (pathname: string) => process.env.PUBLIC_URL + pathname;
+export default function toAbsoluteUrl(pathname: string) { return process.env.PUBLIC_URL + pathname }

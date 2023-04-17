@@ -1,12 +1,14 @@
 import SVG from "react-inlinesvg";
 // import "../scss/temp05.scss";
 import user01 from "../../templates/images/user01.png";
-import { parseUrl, socialSharing } from "../../helper/helper";
+import socialSharing, { parseUrl } from "../../../helper/helper";
 import { useEffect, useState } from "react";
-import { ReviewModal } from "../../component/ReviewModal";
+// import { ReviewModal } from "../../component/ReviewModal";
 import { Avatar } from "@material-ui/core";
+import Image from "next/image";
+import ReviewModal from "@/pages/component/ReviewModal";
 
-export const Template08 = ({ data } : any) => {
+export default function Template08 ({ data } : any) {
  
   const [reviewModal, setReviewModal] = useState<boolean>(false);
   const [showFallback, setShowFallback] = useState<boolean>(false);
@@ -58,7 +60,7 @@ export const Template08 = ({ data } : any) => {
                   }`}
                 >
                   {data[0]?.logoShape === "circle" ? (
-                    <img
+                    <Image
                       src={`https://admin.pocketsite.me/assets/${data[0]?.company_logo?.filename_disk}`}
                       alt="logo"
                     />
