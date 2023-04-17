@@ -2,7 +2,7 @@
 import React, { useEffect, lazy, useState, Suspense } from "react";
 import { nanoid } from "nanoid";
 import Head from "next/head";
-import Loading from "./component/Loading";
+import { Loading } from "./component/Loading";
 
 type Props = {
   user : any;
@@ -16,7 +16,7 @@ const importView = (tempId: number) =>
     ).catch(() => import(`./NotFound`))
   );
 
-const UserByMobileNumber : React.FC<Props> = ({ user }) => {
+export const UserByMobileNumber : React.FC<Props> = ({ user }) => {
   const [views, setViews] = useState<any>();
 
   async function loadViews(tempId: number) {
@@ -60,8 +60,7 @@ const UserByMobileNumber : React.FC<Props> = ({ user }) => {
         <meta
           name="og:image"
           // content={`https://affb-103-206-138-92.in.ngrok.io/assets/images/bg-card.png`} 
-          // content={`https://admin.pocketsite.me/assets/${user?.data[0]?.profile_image?.filename_disk}`} 
-          content={`https://wallpapertag.com/wallpaper/full/2/8/1/519158-large-nature-backgrounds-hd-1920x1080-xiaomi.jpg`} 
+          content={`https://admin.pocketsite.me/assets/${user?.data[0]?.profile_image?.filename_disk}`} 
           // content={`https://admin.pocketsite.me/assets/4778a753-34d0-4b72-9663-a8c9c774699b.png`} 
           // content={`https://admin.pocketsite.me/assets/b4055716-8730-4ee7-a97a-7f10808ed9b8.png`} 
           />
@@ -70,8 +69,6 @@ const UserByMobileNumber : React.FC<Props> = ({ user }) => {
     </>
   );
 };
-
-export default UserByMobileNumber;
 
 export const getServerSideProps = async ({ params } : any) => {
     const { mobileNumber } = params;

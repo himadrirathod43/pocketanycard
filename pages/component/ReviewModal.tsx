@@ -1,16 +1,13 @@
 import { useFormik } from "formik";
 import React, { useEffect, useState } from "react";
 import Modal from "react-bootstrap/Modal";
-// import { InitReviewForm } from "./reviewHelper/InitReviewForm";
-// import { ReviewFormValidate } from "./reviewHelper/ReviewFormValidate";
-// import { ReviewFormModel } from "./reviewHelper/ReviewFormModel";
+import { InitReviewForm } from "./reviewHelper/InitReviewForm";
+import { ReviewFormValidate } from "./reviewHelper/ReviewFormValidate";
+import { ReviewFormModel } from "./reviewHelper/ReviewFormModel";
 import { toast } from "react-toastify";
 import SVG from "react-inlinesvg";
 import Image from "next/image";
-import addReviews from "./reviewHelper/ReviewModalCRUD";
-import ReviewFormValidate from "./reviewHelper/ReviewFormValidate";
-import axios from "axios";
-// import ReviewFormModel from "./reviewHelper/ReviewFormModel";
+import { addReviews, getReviewsByTemplateID } from "./reviewHelper/ReviewModalCRUD";
 
  export type Props = {
   show: boolean;
@@ -18,20 +15,10 @@ import axios from "axios";
   data: any;
 };
 
-const InitReviewForm = {
-  mobile_number: "",
-  name: "",
-  email: "",
-  review_text: "",
-  status: "",
-  date_created: new Date(),
-  user_template_id:""
-}
-
-export default function ReviewModal({ show, handleClose, data  }: Props) {
+const ReviewModal: React.FC<Props> = ({ show, handleClose, data  }) => {
   const [loading, setLoading] = useState(false);
   const [toggle, setToggle] = useState<string>("write");
-  const [reviews, setReviews] = useState<any>(InitReviewForm);
+  const [reviews, setReviews] = useState<ReviewFormModel>(InitReviewForm);
   const [reviewsCount, setReviewsCount] = useState<number>(0);
 
   useEffect(()=> {
@@ -48,7 +35,7 @@ export default function ReviewModal({ show, handleClose, data  }: Props) {
         setSubmitting(false);
         setLoading(false);
       } else { 
-        axios.post(`https://admin.pocketsite.me/items/reviews`, {
+        addReviews({
           ...values, user_template_id: data[0]?.id!, status: "Published"
         })
           .then((res : any) => {
@@ -76,9 +63,8 @@ export default function ReviewModal({ show, handleClose, data  }: Props) {
 
    const getReviewsData = () => {
      if (data[0]?.id!) {
-      axios.get(
-        `https://admin.pocketsite.me/items/reviews?filter[user_template_id][_eq]=${data[0]?.id!}&limit=10`
-        ).then((res: any) => {
+       getReviewsByTemplateID(data[0]?.id!)
+         .then((res: any) => {
            setReviewsCount(res.data.data.length);
            setReviews(res.data.data);
          })
@@ -313,3 +299,5 @@ export default function ReviewModal({ show, handleClose, data  }: Props) {
       {/*end::Form*/} 
     </Modal>
 };
+
+export { ReviewModal }

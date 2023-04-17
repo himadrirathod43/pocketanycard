@@ -1,8 +1,7 @@
-import { mobNum } from "@/helper/helper";
 import * as Yup from "yup";
+import { mobNum } from "../../helper/helper";
 
-export default function ReviewFormValidate() {
-  return Yup.object().shape(
+export const ReviewFormValidate = Yup.object().shape(
   {
     name: Yup.string()
       .min(3, "Minimum 3 Character")
@@ -19,5 +18,4 @@ export default function ReviewFormValidate() {
       .min(10, "Minimum 10 Character")
       .max(150, "Maximum 150 Character")
       .required("Review Text is Required"),
-  },[])
-}
+  },[]);
